@@ -97,14 +97,22 @@ if (Meteor.isClient) {
 				if (fuiHistory) {
 					//If it's up or down to 1, make sure it's enabled
 					if (fuiHistory.length === 1) {
-						//$fuiDragBack.each(function(index, el) {
-							$fuiDragBack.draggabilly('enable');
-						//});
+						$fuiDragBack.draggabilly('enable');
 					//If it's empty, disable the draggers
 					} else if (!fuiHistory.length) {
-						//$fuiDragBack.each(function(index, el) {
-							$fuiDragBack.draggabilly('disable');
-						//});	
+						$fuiDragBack.draggabilly('disable');
+
+						//Reset the position, just in case it's in the middle of a drag (like someone going back really quickly)
+						$fuiDragBack
+							.addClass('fui-swipe-reset')
+							.on("animationend oAnimationEnd webkitAnimationEnd", function() {
+								if (event.target !== event.currentTarget) return;
+								$(this).off("animationend oAnimationEnd webkitAnimationEnd");
+								$(this)
+									.css({'transform': '', 'left': '', 'top': ''})
+					            	.removeClass('fui-swipe-reset');
+					        });
+						
 					}
 				}
 				

@@ -1,0 +1,24 @@
+<template name="home">
+
+
+		<div class="fui-header">
+			<h1>Home</h1>
+		</div>
+
+		<div class="fui-scroll">
+
+			{{#each list}}
+				<a class="fui-item fui-rank-left" href="/item/{{this}}/">
+
+					<div class="fui-rank">{{this}}</div>
+
+					<h2>Home Item {{this}}</h2>
+					<h3>Home item {{this}} subtext!</h3>
+				</a>
+			{{/each}}
+
+		</div>
+	
+
+
+</template>

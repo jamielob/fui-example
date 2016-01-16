@@ -1,0 +1,31 @@
+.fui-dragBack {
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;	
+	height: 100%;
+	width: 20px;
+	z-index: 4; /* On top of content but under headers and tabs */
+}
+
+.fui-swipe-reset {
+	-webkit-animation: fui-swipe-reset 0.35s 0s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: fui-swipe-reset 0.35s 0s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes fui-swipe-reset {
+	to { -webkit-transform: translate3d(0, 0, 0); }
+}
+@keyframes fui-swipe-reset {
+	to { transform: translate3d(0, 0, 0); }
+}
+
+.fui-swipe-complete {
+	-webkit-animation: fui-swipe-complete 0.35s 0s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: fui-swipe-complete 0.35s 0s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes fui-swipe-complete {
+	to { -webkit-transform: translate3d(100%, 0, 0); }
+}
+@keyframes fui-swipe-complete {
+	to { transform: translate3d(100%, 0, 0); }
+}

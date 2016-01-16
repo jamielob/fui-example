@@ -1,0 +1,29 @@
+<template name="fuiTemplate">
+
+	 <div class="fui-content" id="{{name}}" fui-tabs="{{tabs}}">
+		 	{{#if fuiShowContent name}}
+				{{> Template.dynamic template=name}}
+			{{/if}}
+			<div class="fui-dragBack"></div>
+	</div>
+
+</template>
+
+
+<template name="fuiBack">
+
+	{{#if fuiBackPath}}
+       <a href="{{pathFor fuiBackPath}}" class="fui-button fui-back"> {{> UI.contentBlock}} </a>
+    {{/if}}
+
+</template>
+
+<template name="fui">
+	<div class="fui-template-{{fuiCurrentTemplate}}">
+		<div class="fui-status-bar"></div>
+		<div class="fui-container">
+			{{> Template.contentBlock}}
+		</div>
+	</div>
+</template>
+

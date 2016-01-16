@@ -1,0 +1,21 @@
+<template name="profile">
+
+
+		<div class="fui-header">
+			<h1>Profiles</h1>
+		</div>
+
+		<div class="fui-scroll">
+
+			{{#each list}}
+				<a class="fui-item fui-icon-right" href="/item/{{this}}/">
+					<h2>Profile Item {{this}}</h2>
+					<i class="ion-ios-arrow-forward"></i>
+				</a>
+			{{/each}}
+
+		</div>
+	
+
+
+</template>

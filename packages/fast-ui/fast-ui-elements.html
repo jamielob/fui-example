@@ -1,0 +1,22 @@
+<template name="fuiElement">
+
+	<div class="fui-element-container fui-{{type}}" fui-element="{{name}}">
+		<div class="fui-overlay"></div>
+		<div class="fui-element">
+			{{> Template.dynamic template=name}}
+		</div>
+	</div>
+
+</template>
+
+
+
+
+<template name="fuiTabs">
+
+	<div class="fui-tabs fui-tabs-{{fuiTabs}} {{fuiTabsDivider}} {{fuiTabsInline}}" fui-currentTab="{{fuiCurrentTab}}">
+		{{> Template.dynamic template=name}}
+	</div>
+
+</template>
+

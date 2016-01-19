@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 
 	Template.item.helpers({
 		number: function () {
-			return FlowRouter.getParam('number');
+			return fui.getParam('number');
 		}
 	});
 

@@ -12,3 +12,6 @@ App.setPreference('ShowSplashScreenSpinner', 'false');
 //Status bar
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
+
+//So ionicons appear
+App.accessRule('*'); 
